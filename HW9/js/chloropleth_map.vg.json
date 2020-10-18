@@ -1,0 +1,12 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Crime Statistics of Victoria",
+  "width": 800,
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/djhau278/FIT3179/blob/main/HW9/js/VIC_LOCALITY_POLYGON_SHP(1).topojson",
+    "format": {
+          "type": "topojson",
+          "feature": "VIC_LOCALITY_POLYGON_SHP(1)"
+        }
+  },
