@@ -1,12 +1,25 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Crime Statistics of Victoria",
+  "title": "Taiwan Tourist",
   "width": 800,
   "height": 600,
   "data": {
-    "url": "https://raw.githubusercontent.com/djhau278/FIT3179/blob/main/HW9/js/VIC_LOCALITY_POLYGON_SHP(1).topojson",
+    "url": "https://raw.githubusercontent.com/djhau278/FIT3179/blob/main/HW9/js/countries.topojson",
     "format": {
           "type": "topojson",
-          "feature": "VIC_LOCALITY_POLYGON_SHP(1)"
+          "feature": "countries"
         }
   },
+  "transform": [ { "lookup": "properties.NAME", "from": { "data": { "url": "https://raw.githubusercontent.com/djhau278/FIT3179/blob/main/HW9/data/residence.csv"
+                                                                  },
+                                                         "key": "Residence", "fields"
+                                                        }
+                 }
+                ], 
+  "mark": {"type": "geoshape"},
+  "encoding": {
+    "color": {
+      "field": "Total",
+      "type": "quantitative", 
+    },
+    "tooltip": [ {"field": "properties.NAME", "type": "nominal", "title": "Country"}, {"field": "Total", "type": "quantitative"} ] } }
