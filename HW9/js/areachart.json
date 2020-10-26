@@ -1,15 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Number of Tourists In Taiwan Over Time",
+  "title": "Top 5 Tourist Residence",
   "width": 800,
   "height": 300,
   "data": {
-    "url": "https://raw.githubusercontent.com/djhau278/FIT3179/main/HW9/data/tourist.csv"
-  },
-  "mark": "area",
-  "encoding": {
-    "x": {"timeUnit": "year", "field": "Year", "axis": {"format": "%Y"}},
-    "y": {"aggregate": "sum", "field": "Total", "title": "Tourists"}
-  },
-  "config": {}
-}
+    "url": "https://raw.githubusercontent.com/djhau278/FIT3179/main/HW9/data/touristtotal.csv"}, 
+    "mark": "line", 
+    "encoding": {
+          "x": {"field": "Year", "type": "temporal"},
+          "y": {"field": "Total", "type": "quantitative"},
+         "color": {"field": "Country", "type": "nominal"}
+       }
+      }
