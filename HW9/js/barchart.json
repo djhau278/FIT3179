@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": "Purpose of Visit 2019",
+  "width": 800,
+  "height": {"step": 17},
+  "data": {
+    "url": "https://raw.githubusercontent.com/djhau278/FIT3179/main/HW9/data/purposeofvisit2019.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "y": {"field": "Purpose ", "type": "nominal", "sort": "-x"},
+    "x": {"aggregate": "sum", "field": "Total"},
+    "color": {"field": "Purpose ", "type": "nominal"}
+  },
+  "config": {}
+}
