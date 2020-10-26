@@ -4,7 +4,7 @@
   "width": 800,
   "height": 600,
   "data": {
-    "url": "https://raw.githubusercontent.com/djhau278/FIT3179/main/HW9/js/countries.topojson",
+    "url": "https://raw.githubusercontent.com/djhau278/FIT3179/main/countries.topojson",
     "format": {
           "type": "topojson",
           "feature": "countries"
@@ -15,7 +15,7 @@
       "lookup": "properties.NAME",
       "from": { 
         "data": { 
-          "url": "https://raw.githubusercontent.com/djhau278/FIT3179/main/HW9/data/residence.csv"
+          "url": "https://raw.githubusercontent.com/djhau278/FIT3179/main/residence.csv"
        },
       "key": "Country", 
       "fields": ["Total"]
