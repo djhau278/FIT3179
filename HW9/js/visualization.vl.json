@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Taiwan Tourist (2015 - 2020)",
+  "title": "Taiwan Tourist (2015 - 2019)",
   "width": 800,
   "height": 600,
   "data": {
