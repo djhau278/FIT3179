@@ -6,11 +6,40 @@
   "data": {
     "url": "https://raw.githubusercontent.com/djhau278/FIT3179/main/HW9/data/purposeofvisit2019.csv"
   },
-  "mark": "bar",
+  "selection": {
+    "highlight": {"type": "single", "empty": "none", "on": "mouseover"},
+    "select": {"type": "multi"}
+  },
+  "mark":  {
+    "type": "bar",
+    "stroke": "black",
+    "cursor": "pointer"
+  },
   "encoding": {
     "y": {"field": "Purpose ", "type": "nominal", "sort": "-x"},
     "x": {"aggregate": "sum", "field": "Total"},
     "color": {"field": "Purpose ", "type": "nominal"}
+  ,
+  "fillOpacity": {
+      "condition": {"selection": "select", "value": 1},
+      "value": 0.3
+    },
+    "strokeWidth": {
+      "condition": [
+        {
+          "test": {
+            "and": [{"selection": "select"}, "length(data(\"select_store\"))"]
+          },
+          "value": 2
+        },
+        {"selection": "highlight", "value": 1}
+      ],
+      "value": 0
+    },
+    "tooltip": [
+      {"field": "Purpose ", "type": "nominal", "title": "Purpose "},
+      {"field": "Total", "type": "nominal", "title": "Total"}
+    ]
   },
-  "config": {}
+  "config": {"scale": {"bandPaddingInner": 0.2}}
 }
