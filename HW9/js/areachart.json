@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "title": "Top 5 Tourist Residence",
+  "title": "Top 5 Tourist Residence (2015 - 2019)",
   "width": 700,
   "height": 300,
   "data": {
