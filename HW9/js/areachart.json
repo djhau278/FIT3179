@@ -4,11 +4,15 @@
   "width": 700,
   "height": 300,
   "data": {
-    "url": "https://raw.githubusercontent.com/djhau278/FIT3179/main/HW9/data/touristtotal.csv"}, 
-    "mark": "line", 
-    "encoding": {
-          "x": {"field": "Year", "type": "temporal"},
-          "y": {"field": "Total", "type": "quantitative"},
-         "color": {"field": "Country", "type": "nominal"}
-       }
-      }
+    "url": "https://raw.githubusercontent.com/djhau278/FIT3179/main/HW9/data/touristtotal.csv"
+  },
+  "mark": {
+    "type": "line",
+    "point": true
+  },
+  "encoding": {
+    "x": {"field": "Year", "type": "ordinal"},
+    "y": {"field": "Total", "type": "quantitative"},
+    "color": {"field": "Country", "type": "nominal"}
+  }
+}
